@@ -10,7 +10,7 @@ The code also contains two traditional filtering methods (Laplacian filtering an
 
 - A C++17 compiler  
 - CMake ≥ 3.10  
-- pmp-library (included as a Git submodule)
+- pmp-library 
 
 ## Build
 
