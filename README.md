@@ -4,6 +4,8 @@ A C++ implementation of a two-stage mesh denoising method used in my bachelor’
 Diffusion — anisotropic diffusion to smooth the mesh and eliminate high-frequency noise 
 Optimization — modified moving least squares (MLS) to approximate local geometry and reduce remaining low-frequency noise
 
+Code also contains two traditional methods that were used as a comparison for our method (Laplacian filtering, Bilateral filtering), and 
+
 ## Prerequisites
 
 - A C++17 compiler
