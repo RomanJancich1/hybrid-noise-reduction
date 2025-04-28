@@ -1,22 +1,26 @@
-# pmp-template
+# Hybrid Noise Reduction
 
-This repository provides a simple project template for writing your own
-algorithms and applications using the pmp-library. It directly includes the
-pmp-library repository as a git submodule. To get started, just clone the
-repository recursively:
+A C++ implementation of a two-stage mesh denoising method used in my bachelor’s thesis:
+Diffusion — anisotropic diffusion to smooth the mesh and eliminate high-frequency noise 
+Optimization — modified moving least squares (MLS) to approximate local geometry and reduce remaining low-frequency noise
 
-    git clone --recursive https://github.com/pmp-library/pmp-template.git
+## Prerequisites
 
-Configure and build:
+- A C++17 compiler
+- CMake ≥3.10
+- [pmp-library](https://github.com/pmp-library/pmp-library) as a Git submodule (already included)
 
-    cd pmp-template && mkdir build && cd build && cmake .. && make
+## Build
 
-Run the viewer:
+```bash
+# Clone your repo (with submodules)
+git clone --recursive https://github.com/RomanJancich1/hybrid-noise-reduction.git
+cd hybrid-noise-reduction
 
-    ./myviewer
+# Create and enter build directory
+mkdir build
+cd build
 
-## License
-
-As the pmp-library itself, this template is provided under a simple and flexible MIT-style
-[license](https://github.com/pmp-library/pmp-template/blob/master/LICENSE.txt),
-thereby allowing for both open-source and commercial usage.
+# Configure and compile
+cmake ..
+cmake --build .
