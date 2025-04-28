@@ -4,18 +4,18 @@ A C++ implementation of a two-stage mesh denoising method used in my bachelor’
 Diffusion — anisotropic diffusion to smooth the mesh and eliminate high-frequency noise 
 Optimization — modified moving least squares (MLS) to approximate local geometry and reduce remaining low-frequency noise
 
-Code also contains two traditional methods that were used as a comparison for our method (Laplacian filtering, Bilateral filtering), and 
+The code also contains two traditional filtering methods (Laplacian filtering and bilateral filtering) for comparison and a Chamfer distance to evaluate the algorithms.
 
 ## Prerequisites
 
-- A C++17 compiler
-- CMake ≥3.10
-- [pmp-library](https://github.com/pmp-library/pmp-library) as a Git submodule (already included)
+- A C++17 compiler  
+- CMake ≥ 3.10  
+- pmp-library (included as a Git submodule)
 
 ## Build
 
 ```bash
-# Clone your repo (with submodules)
+# Download the repository
 git clone --recursive https://github.com/RomanJancich1/hybrid-noise-reduction.git
 cd hybrid-noise-reduction
 
@@ -26,3 +26,4 @@ cd build
 # Configure and compile
 cmake ..
 cmake --build .
+```
